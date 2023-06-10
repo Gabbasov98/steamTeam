@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Главная</title>
+</head>
+
+<body class="page">
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <a href="" class="header__logo">
+                        <svg width="226" height="47" viewBox="0 0 226 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.9245 0.245636C10.8398 0.245636 0.940093 9.64872 0 21.5976L12.3296 26.7419C13.4062 25.9967 14.6848 25.5982 15.9941 25.5998C16.1165 25.5998 16.2374 25.6032 16.3565 25.6099L21.8403 17.5886V17.4763C21.8403 12.6497 25.7316 8.7219 30.5152 8.7219C35.2985 8.7219 39.1899 12.6497 39.1899 17.4763C39.1899 22.3027 35.2985 26.232 30.5152 26.232C30.4488 26.232 30.3842 26.2304 30.3182 26.2288L22.4973 31.8581C22.5023 31.9625 22.5055 32.0667 22.5055 32.1693C22.5055 35.7941 19.5843 38.7421 15.9941 38.7421C12.8427 38.7421 10.2059 36.4712 9.61012 33.4654L0.791185 29.7857C3.5223 39.5299 12.394 46.6737 22.9245 46.6737C35.6297 46.6737 45.9282 36.2792 45.9282 23.4597C45.9282 10.6387 35.6297 0.245636 22.9245 0.245636ZM14.4157 35.469L11.5902 34.2906C12.0902 35.3432 12.9575 36.2238 14.1079 36.7073C16.5939 37.7532 19.4606 36.5632 20.4969 34.0522C20.9986 32.8449 21.0016 31.4879 20.5052 30.2784C20.0086 29.0602 19.0701 28.1101 17.8668 27.6036C16.6702 27.1022 15.389 27.1203 14.2634 27.5491L17.1833 28.7672C19.0172 29.5387 19.8844 31.6638 19.1198 33.5144C18.3568 35.3648 16.2496 36.2404 14.4157 35.469ZM36.2957 17.4763C36.2957 14.2604 33.702 11.6419 30.5157 11.6419C27.3278 11.6419 24.7341 14.2604 24.7341 17.4763C24.7341 20.6923 27.3278 23.3091 30.5157 23.3091C33.702 23.3091 36.2957 20.6923 36.2957 17.4763ZM26.1825 17.4664C26.1825 15.0465 28.1273 13.0853 30.5241 13.0853C32.9225 13.0853 34.8672 15.0465 34.8672 17.4664C34.8672 19.8862 32.9225 21.8477 30.524 21.8477C28.1273 21.8477 26.1823 19.8862 26.1823 17.4666L26.1825 17.4664Z" fill="#A58FFF" />
+                            <path class="path-fill" d="M56.8511 28.3366H61.9634C62.1538 29.7868 63.7798 30.7536 65.772 30.7536C67.8667 30.7536 69.229 29.8161 69.229 28.5417C69.229 27.3698 68.3354 26.7985 65.9331 26.3005L63.1646 25.7585C59.2681 25.0114 57.2612 22.902 57.2612 19.694C57.2612 15.5925 60.7769 12.9557 65.6694 12.9557C70.9575 12.9557 74.0776 15.5192 74.1362 19.489H69.1851C69.0825 17.9509 67.6616 17.028 65.728 17.028C63.853 17.028 62.6079 17.8776 62.6079 19.1667C62.6079 20.3093 63.5454 20.9391 65.7573 21.3932L68.4966 21.9059C72.6714 22.7116 74.5464 24.6013 74.5464 27.9411C74.5464 32.1452 71.0747 34.8259 65.6255 34.8259C60.2349 34.8259 56.9097 32.4382 56.8511 28.3366ZM78.0767 14.5524H83.2622V18.1559H86.2065V21.9938H83.2622V28.9518C83.2622 30.0944 83.8774 30.6657 85.1519 30.6657C85.5767 30.6657 85.8989 30.6364 86.2065 30.5925V34.2839C85.6938 34.4011 84.9321 34.489 83.9214 34.489C79.7319 34.489 78.0767 33.1852 78.0767 29.9919V21.9938H75.894V18.1559H78.0767V14.5524ZM95.9917 21.4958C94.3218 21.4958 93.0767 22.7263 92.9448 24.4694H99.0093C98.9067 22.6677 97.7202 21.4958 95.9917 21.4958ZM99.1265 29.3327H103.814C103.316 32.6725 100.313 34.8112 96.0942 34.8112C90.938 34.8112 87.8325 31.6325 87.8325 26.3884C87.8325 21.1296 90.9673 17.8044 95.9185 17.8044C100.782 17.8044 103.917 20.9977 103.917 25.9636V27.4431H92.8862V27.7653C92.8862 29.7575 94.2192 31.1198 96.1675 31.1198C97.603 31.1198 98.731 30.446 99.1265 29.3327ZM112.706 31.0759C114.375 31.0759 115.796 30.0798 115.796 28.5856V27.4577L112.793 27.6628C111.314 27.7653 110.508 28.3952 110.508 29.3913C110.508 30.4313 111.373 31.0759 112.706 31.0759ZM110.875 34.6794C107.813 34.6794 105.367 32.6725 105.367 29.7429C105.367 26.696 107.71 25.0114 111.973 24.7477L115.796 24.5134V23.5759C115.796 22.2429 114.844 21.5251 113.379 21.5251C111.973 21.5251 111.021 22.2722 110.875 23.2829H106.202C106.333 19.987 109.219 17.8044 113.628 17.8044C117.979 17.8044 120.865 20.0163 120.865 23.2975V34.4597H115.826V32.1159H115.723C114.844 33.7565 112.852 34.6794 110.875 34.6794ZM123.472 34.4597V18.1559H128.511V21.2907H128.614C129.258 19.196 131.075 17.8776 133.272 17.8776C135.689 17.8776 137.344 19.1227 137.813 21.3347H137.916C138.56 19.2253 140.523 17.8776 142.955 17.8776C146.133 17.8776 148.301 20.1042 148.301 23.4147V34.4597H143.116V24.7331C143.116 23.0046 142.31 22.0964 140.772 22.0964C139.307 22.0964 138.37 23.1511 138.37 24.7917V34.4597H133.418V24.6599C133.418 23.0192 132.569 22.0964 131.075 22.0964C129.625 22.0964 128.658 23.1804 128.658 24.821V34.4597H123.472ZM159.419 34.4597H154.043V17.6579H148.184V13.322H165.279V17.6579H159.419V34.4597ZM172.164 21.4958C170.494 21.4958 169.249 22.7263 169.117 24.4694H175.181C175.079 22.6677 173.892 21.4958 172.164 21.4958ZM175.298 29.3327H179.986C179.488 32.6725 176.485 34.8112 172.266 34.8112C167.11 34.8112 164.004 31.6325 164.004 26.3884C164.004 21.1296 167.139 17.8044 172.09 17.8044C176.954 17.8044 180.088 20.9977 180.088 25.9636V27.4431H169.058V27.7653C169.058 29.7575 170.391 31.1198 172.339 31.1198C173.775 31.1198 174.903 30.446 175.298 29.3327ZM188.877 31.0759C190.547 31.0759 191.968 30.0798 191.968 28.5856V27.4577L188.965 27.6628C187.486 27.7653 186.68 28.3952 186.68 29.3913C186.68 30.4313 187.544 31.0759 188.877 31.0759ZM187.046 34.6794C183.985 34.6794 181.539 32.6725 181.539 29.7429C181.539 26.696 183.882 25.0114 188.145 24.7477L191.968 24.5134V23.5759C191.968 22.2429 191.016 21.5251 189.551 21.5251C188.145 21.5251 187.193 22.2722 187.046 23.2829H182.374C182.505 19.987 185.391 17.8044 189.8 17.8044C194.151 17.8044 197.037 20.0163 197.037 23.2975V34.4597H191.998V32.1159H191.895C191.016 33.7565 189.024 34.6794 187.046 34.6794ZM199.644 34.4597V18.1559H204.683V21.2907H204.786C205.43 19.196 207.247 17.8776 209.444 17.8776C211.861 17.8776 213.516 19.1227 213.985 21.3347H214.087C214.732 19.2253 216.695 17.8776 219.126 17.8776C222.305 17.8776 224.473 20.1042 224.473 23.4147V34.4597H219.288V24.7331C219.288 23.0046 218.482 22.0964 216.944 22.0964C215.479 22.0964 214.542 23.1511 214.542 24.7917V34.4597H209.59V24.6599C209.59 23.0192 208.741 22.0964 207.247 22.0964C205.796 22.0964 204.83 23.1804 204.83 24.821V34.4597H199.644Z" fill="black" />
+                        </svg>
+                    </a>
+
+                    <div class="header__nav">
+                        <a href="" class="header__btn header__support m-btn m-btn-outline">
+                            <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.2317 17.216V17.214L17.2502 17.1699L20.3215 1.68508V1.63592C20.3215 1.24982 20.1782 0.912882 19.8689 0.711128C19.5975 0.533953 19.2851 0.521664 19.066 0.53805C18.862 0.556501 18.6607 0.597722 18.4658 0.660946C18.3827 0.687732 18.3007 0.717796 18.22 0.751069L18.2067 0.75619L1.08327 7.47346L1.07815 7.47551C1.02609 7.49328 0.975132 7.51414 0.925552 7.53798C0.803771 7.59269 0.68693 7.65779 0.576323 7.73256C0.356135 7.88413 -0.0627338 8.24053 0.00793116 8.80585C0.0663066 9.2749 0.388908 9.5719 0.607047 9.72654C0.735806 9.81678 0.874238 9.89235 1.01977 9.95185L1.05254 9.96619L1.06278 9.96926L1.06995 9.97233L4.06656 10.9811C4.05632 11.1685 4.07475 11.36 4.12493 11.5495L5.62528 17.2426C5.70725 17.553 5.88436 17.8298 6.13174 18.0343C6.37912 18.2389 6.68435 18.3607 7.00456 18.3829C7.32476 18.405 7.64387 18.3263 7.91705 18.1578C8.19023 17.9893 8.40376 17.7395 8.52767 17.4434L10.8709 14.9383L14.8947 18.023L14.952 18.0476C15.3176 18.2074 15.6587 18.2575 15.971 18.2156C16.2834 18.1725 16.5312 18.0415 16.7176 17.893C16.9332 17.7182 17.105 17.4955 17.2195 17.2426L17.2277 17.2252L17.2307 17.2191L17.2317 17.216ZM5.60992 11.1583C5.59331 11.0951 5.59726 11.0283 5.6212 10.9675C5.64514 10.9067 5.68782 10.8552 5.74306 10.8203L15.9035 4.3683C15.9035 4.3683 16.5015 4.00473 16.48 4.3683C16.48 4.3683 16.5865 4.43179 16.266 4.72981C15.9629 5.0135 9.02437 11.7123 8.32182 12.3903C8.28275 12.4282 8.25539 12.4766 8.24296 12.5296L7.11027 16.8514L5.60992 11.1573V11.1583Z" fill="#886AFF" />
+                            </svg>
+                            <span>Поддержка</span>
+                        </a>
+                        <a href="" class="header__btn m-btn m-btn-primary">
+                            <span class="_view1">Пополнить баланс Steam</span>
+                            <span class="_view2">Пополнить баланс</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        <main class="content">
+
+            <section class="main">
+                <div class="container">
+                    <h1 class="text40 bold-text">
+                        Пополнить баланс аккаунта Steam быстро и безопасно
+                    </h1>
+                    <form class="main__grid">
+                        <div class="main__col">
+                            <img src="img/num.svg" alt="" class="main__num">
+                            <div class="text24 bold-text dark-text">
+                                Введите логин и сумму
+                            </div>
+                            <div class="main__fields">
+                                <fieldset class="fg">
+                                    <a href="" class="fg__btn m-btn m-btn-primary">
+                                        <span>Где взять логин?</span>
+                                    </a>
+                                    <img class="fg__icon" src="img/steam.svg" alt="">
+                                    <input type="text" placeholder="Логин Steam">
+                                </fieldset>
+                                <fieldset class="fg">
+                                    <img class="fg__icon" src="img/rouble.svg" alt="">
+                                    <input type="text" placeholder="Сумма">
+                                </fieldset>
+                                <fieldset class="fg">
+                                    <img class="fg__icon" src="img/tg.svg" alt="">
+                                    <input type="text" placeholder="Аккаунт Телеграм">
+                                </fieldset>
+                                <fieldset class="fg">
+                                    <img class="fg__icon" src="img/check.svg" alt="">
+                                    <input type="tel" placeholder="Номер телефона">
+                                </fieldset>
+                                <fieldset class="fg">
+                                    <img class="fg__icon" src="img/check.svg" alt="">
+                                    <input type="text" placeholder="Промокод">
+                                </fieldset>
+                            </div>
+                            <div class="main__check m-check">
+                                <input type="checkbox">
+                                <label>
+                                    Я ознакомлен и согласен с условиями <br>
+                                    <a href="">пользовательского соглашения</a> и
+                                    <a href="">правилами возврата</a>
+                                </label>
+                            </div>
+                            <button class="main__btn m-btn m-btn-primary">
+                                <span>ОПЛАТИТЬ</span>
+                            </button>
+                        </div>
+                        <div class="main__col">
+                            <img src="img/num2.svg" alt="" class="main__num">
+                            <div class="text24 bold-text dark-text">
+                                Выберите способ оплаты
+                            </div>
+                            <div class="pay-ways">
+                                <div class="pay-way">
+                                    <div class="pay-way__img">
+                                        <img src="img/pay.png" alt="">
+                                    </div>
+                                    <div class="pay-way__title">
+                                        Оплата картой
+                                    </div>
+                                    <input checked type="radio" name="pay">
+                                    <label></label>
+                                </div>
+                                <div class="pay-way">
+                                    <div class="pay-way__img">
+                                        <img src="img/pay2.png" alt="">
+                                    </div>
+                                    <div class="pay-way__title">
+                                        Оплата QIWI
+                                    </div>
+                                    <input type="radio" name="pay">
+                                    <label></label>
+                                </div>
+                                <div class="pay-way">
+                                    <div class="pay-way__img">
+                                        <img src="img/pay3.png" alt="">
+                                    </div>
+                                    <div class="pay-way__title">
+                                        Оплата YooMoney
+                                    </div>
+                                    <input type="radio" name="pay">
+                                    <label></label>
+                                </div>
+                                <div class="pay-way">
+                                    <div class="pay-way__img">
+                                        <img src="img/pay4.png" alt="">
+                                    </div>
+                                    <div class="pay-way__title">
+                                        Tinkoff Pay
+                                    </div>
+                                    <input type="radio" name="pay">
+                                    <label></label>
+                                </div>
+                                <div class="pay-way">
+                                    <div class="pay-way__img">
+                                        <img src="img/pay5.png" alt="">
+                                    </div>
+                                    <div class="pay-way__title">
+                                        Yandex Pay
+                                    </div>
+                                    <input type="radio" name="pay">
+                                    <label></label>
+                                </div>
+                                <div class="pay-way">
+                                    <div class="pay-way__img">
+                                        <img src="img/pay7.png" alt="">
+                                    </div>
+                                    <div class="pay-way__title">
+                                        СБП
+                                    </div>
+                                    <input type="radio" name="pay">
+                                    <label></label>
+                                </div>
+
+                            </div>
+                            <div class="pay-detail">
+                                <div class="pay-detail__row">
+                                    <div class="pay-detail__title">Сумма </div>
+                                    <div class="pay-detail__desc">500 ₽</div>
+                                </div>
+                                <div class="pay-detail__row">
+                                    <div class="pay-detail__title">Комиссия</div>
+                                    <div class="pay-detail__desc">40 ₽</div>
+                                </div>
+                                <div class="pay-detail__row">
+                                    <div class="pay-detail__title">Банковские издержки</div>
+                                    <div class="pay-detail__desc">20 ₽</div>
+                                </div>
+                                <div class="pay-detail__row">
+                                    <div class="pay-detail__title">На аккаунт придет</div>
+                                    <div class="pay-detail__desc">480 ₽</div>
+                                </div>
+                                <div class="pay-detail__row pay-detail__row--last">
+                                    <div class="pay-detail__title">К оплате</div>
+                                    <div class="pay-detail__desc">560 ₽</div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <section class="advantages">
+                <div class="container">
+                    <div class="advantages__inner">
+                        <div class="advantages__col">
+                            <div class="advantages-info">
+                                <div class="text45 bold-text">
+                                    Преимущества работы с нами:
+                                </div>
+                                <div class="text20 dark-text">
+                                    Команда Steam Team заботиться о том, чтобы вы могли быстро и безопасно пополнить ваш Steam-аккаунт, несмотря на сложившуюся ситуацию, и продолжать наслаждаться всеми возможностями платформы
+                                </div>
+                            </div>
+                        </div>
+                        <div class="advantages__col">
+                            <div class="advantages__items">
+                                <div class="advantage-card _card">
+                                    <div class="advantage-card__icon">
+                                        <img src="img/advantage-icon.svg" alt="">
+                                    </div>
+                                    <div class="advantage-card__content dark-text">
+                                        <div class="advantage-card__title text20 bold-text">
+                                            Ощутимая экономия
+                                        </div>
+                                        <div class="advantage-card__desc text15">
+                                            Постоянное отслеживание изменений международной финансовой инфраструктуры позволяет вам не переплачивать, пополняя через нас баланс в Steam.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="advantage-card _card">
+                                    <div class="advantage-card__icon">
+                                        <img src="img/advantage-icon2.svg" alt="">
+                                    </div>
+                                    <div class="advantage-card__content dark-text">
+                                        <div class="advantage-card__title text20 bold-text">
+                                            Защищенные сделки
+                                        </div>
+                                        <div class="advantage-card__desc text15">
+                                            Мы гарантируем 100% безопасность переводимых средств, отсутствия скрытых комиссий и выполнения заказов на пополнение аккаунтов
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="advantage-card _card">
+                                    <div class="advantage-card__icon">
+                                        <img src="img/advantage-icon3.svg" alt="">
+                                    </div>
+                                    <div class="advantage-card__content dark-text">
+                                        <div class="advantage-card__title text20 bold-text">
+                                            Быстрое пополнение
+                                        </div>
+                                        <div class="advantage-card__desc text15">
+                                            Мы создали сервис, благодаря которому ваш аккаунт Steam пополняется мгновенно
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="advantage-card _card">
+                                    <div class="advantage-card__icon">
+                                        <img src="img/advantage-icon3.svg" alt="">
+                                    </div>
+                                    <div class="advantage-card__content dark-text">
+                                        <div class="advantage-card__title text20 bold-text">
+                                            Быстрое пополнение
+                                        </div>
+                                        <div class="advantage-card__desc text15">
+                                            Мы создали сервис, благодаря которому ваш аккаунт Steam пополняется мгновенно
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="review">
+                <div class="container">
+                    <div class="text45 bold-text">
+                        Последние отзывы о Steam Team
+                    </div>
+                    <div class="review__inner">
+                        <div class="review__col">
+                            <div class="review__items">
+                                <div class="review-card _card">
+                                    <div class="review-card__wrap">
+                                        <div class="review-card__img">
+                                            <img src="img/avatar.webp" alt="">
+                                        </div>
+                                        <div class="review-card__content dark-text">
+                                            <div class="review-card__title text20 bold-text">
+                                                Имя Фамилия
+                                            </div>
+                                            <div class="review-card__desc text15">
+                                                Сделали что заявлено, баланс пополнен. И комиссия не такая высокая, как у конкурентов. Благодарю!
+                                            </div>
+                                            <div class="review-card__comment">
+                                                <div class="review-card__comment-left">
+                                                    <button class="review-card__add">
+                                                        Комментировать
+                                                    </button>
+                                                    <div class="review-card__mess">
+                                                        <input type="text" placeholder="Введите ваш комментарий">
+                                                        <button class="review-card__send">
+                                                            <img src="img/send.svg" alt="">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="review-card__comment-right">
+                                                    <div class="review-card__like">
+                                                        <img src="img/heart.svg" alt="">
+                                                        <span class="text15 primary-text">1</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="review-card__response">
+                                                <div class="review-card__wrap">
+                                                    <div class="review-card__img">
+                                                        <img src="img/avatar2.webp" alt="">
+                                                    </div>
+                                                    <div class="review-card__content dark-text">
+                                                        <div class="review-card__title text20 bold-text">
+                                                            Steam Team
+                                                        </div>
+                                                        <div class="review-card__desc text15">
+                                                            Спасибо за отзыв, стараемся!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="review-card _card">
+                                    <div class="review-card__wrap">
+                                        <div class="review-card__img">
+                                            <img src="img/avatar.webp" alt="">
+                                        </div>
+                                        <div class="review-card__content dark-text">
+                                            <div class="review-card__title text20 bold-text">
+                                                Имя Фамилия
+                                            </div>
+                                            <div class="review-card__desc text15">
+                                                Сделали что заявлено, баланс пополнен. И комиссия не такая высокая, как у конкурентов. Благодарю!
+                                            </div>
+                                            <div class="review-card__comment">
+                                                <div class="review-card__comment-left">
+                                                    <button class="review-card__add">
+                                                        Комментировать
+                                                    </button>
+                                                    <div class="review-card__mess">
+                                                        <input type="text" placeholder="Введите ваш комментарий">
+                                                        <button class="review-card__send">
+                                                            <img src="img/send.svg" alt="">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="review-card__comment-right">
+                                                    <div class="review-card__like">
+                                                        <img src="img/heart.svg" alt="">
+                                                        <span class="text15 primary-text">1</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="review-card _card">
+                                    <div class="review-card__wrap">
+                                        <div class="review-card__img">
+                                            <img src="img/avatar.webp" alt="">
+                                        </div>
+                                        <div class="review-card__content dark-text">
+                                            <div class="review-card__title text20 bold-text">
+                                                Имя Фамилия
+                                            </div>
+                                            <div class="review-card__desc text15">
+                                                Сделали что заявлено, баланс пополнен. И комиссия не такая высокая, как у конкурентов. Благодарю!
+                                            </div>
+                                            <div class="review-card__comment">
+                                                <div class="review-card__comment-left">
+                                                    <button class="review-card__add">
+                                                        Комментировать
+                                                    </button>
+                                                    <div class="review-card__mess">
+                                                        <input type="text" placeholder="Введите ваш комментарий">
+                                                        <button class="review-card__send">
+                                                            <img src="img/send.svg" alt="">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="review-card__comment-right">
+                                                    <div class="review-card__like">
+                                                        <img src="img/heart.svg" alt="">
+                                                        <span class="text15 primary-text">1</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="review-card _card">
+                                    <div class="review-card__wrap">
+                                        <div class="review-card__img">
+                                            <img src="img/avatar.webp" alt="">
+                                        </div>
+                                        <div class="review-card__content dark-text">
+                                            <div class="review-card__title text20 bold-text">
+                                                Имя Фамилия
+                                            </div>
+                                            <div class="review-card__desc text15">
+                                                Сделали что заявлено, баланс пополнен. И комиссия не такая высокая, как у конкурентов. Благодарю!
+                                            </div>
+                                            <div class="review-card__comment">
+                                                <div class="review-card__comment-left">
+                                                    <button class="review-card__add">
+                                                        Комментировать
+                                                    </button>
+                                                    <div class="review-card__mess">
+                                                        <input type="text" placeholder="Введите ваш комментарий">
+                                                        <button class="review-card__send">
+                                                            <img src="img/send.svg" alt="">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="review-card__comment-right">
+                                                    <div class="review-card__like">
+                                                        <img src="img/heart.svg" alt="">
+                                                        <span class="text15 primary-text">1</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="review-card _card">
+                                    <div class="review-card__wrap">
+                                        <div class="review-card__img">
+                                            <img src="img/avatar.webp" alt="">
+                                        </div>
+                                        <div class="review-card__content dark-text">
+                                            <div class="review-card__title text20 bold-text">
+                                                Имя Фамилия
+                                            </div>
+                                            <div class="review-card__desc text15">
+                                                Сделали что заявлено, баланс пополнен. И комиссия не такая высокая, как у конкурентов. Благодарю!
+                                            </div>
+                                            <div class="review-card__comment">
+                                                <div class="review-card__comment-left">
+                                                    <button class="review-card__add">
+                                                        Комментировать
+                                                    </button>
+                                                    <div class="review-card__mess">
+                                                        <input type="text" placeholder="Введите ваш комментарий">
+                                                        <button class="review-card__send">
+                                                            <img src="img/send.svg" alt="">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="review-card__comment-right">
+                                                    <div class="review-card__like">
+                                                        <img src="img/heart.svg" alt="">
+                                                        <span class="text15 primary-text">1</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="review__col">
+                            <div class="review-sidebar">
+                                <div class="review-sidebar__text text18 dark-text">
+                                    В сутки мы обрабатываем более 500 оплат, каждая из которых зачисляется в течение 5 минут. Вы можете посмотреть отзывы, которые нам оставляют клиенты на нашем сайте и на других платформах, а также оставить свой
+                                </div>
+                                <div class="review-sidebar__nav">
+                                    <button class="review-sidebar__btn m-btn m-btn-primary">
+                                        <span>Добавить свой отзыв</span>
+                                    </button>
+                                    <button class="review-sidebar__btn m-btn m-btn-primary">
+                                        <span>Смотреть еще 444 отзыва</span>
+                                    </button>
+                                </div>
+                                <div class="review-platforms">
+                                    <div class="text20 bold-text">
+                                        Отзывы на других площадках
+                                    </div>
+                                    <div class="review-platforms__nav">
+                                        <button class="review-platforms__btn">
+                                            <img src="img/google.png" alt="">
+                                        </button>
+                                        <button class="review-platforms__btn">
+                                            <img src="img/yandex.png" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="faq">
+                <div class="container">
+                    <div class="text45 bold-text">
+                        Часто задаваемые вопросы
+                    </div>
+                    <div class="faq__items">
+                        <div class="qa-card dark-text">
+                            <div class="qa-card__show">
+                                <div class="qa-card__title text20 bold-text">
+                                    Вопрос номер один, который часто задают
+                                </div>
+                                <div class="qa-card__btn">
+                                    <span>+</span>
+                                </div>
+                            </div>
+                            <div class="qa-card__hidden">
+                                <div class="text16">
+                                    Lorem ipsum dolor sit amet consectetur. Dis aliquet consequat felis quis diam consectetur. Quisque velit ut nulla id enim iaculis curabitur netus odio. Quam sed et enim vulputate. Mi elementum orci ut nunc id ultrices erat scelerisque. Convallis massa urna gravida dignissim neque at nisl faucibus accumsan. Pellentesque pellentesque odio ullamcorper nam pharetra fames enim posuere. Purus at nullam mi aliquam velit in. Elementum turpis magna vitae fermentum cursus maecenas integer dignissim tortor. Ut diam interdum vel sagittis risus lacus tincidunt suspendisse. At facilisi sed amet ut faucibus. Leo tortor odio velit tristique morbi purus. Et odio odio amet at ut. Tellus aenean turpis tempus porttitor pharetra tincidunt habitant tempus bibendum.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="qa-card dark-text">
+                            <div class="qa-card__show">
+                                <div class="qa-card__title text20 bold-text">
+                                    Вопрос номер два, который часто задают
+                                </div>
+                                <div class="qa-card__btn">
+                                    <span>+</span>
+                                </div>
+                            </div>
+                            <div class="qa-card__hidden">
+                                <div class="text16">
+                                    Lorem ipsum dolor sit amet consectetur. Dis aliquet consequat felis quis diam consectetur. Quisque velit ut nulla id enim iaculis curabitur netus odio. Quam sed et enim vulputate. Mi elementum orci ut nunc id ultrices erat scelerisque. Convallis massa urna gravida dignissim neque at nisl faucibus accumsan. Pellentesque pellentesque odio ullamcorper nam pharetra fames enim posuere. Purus at nullam mi aliquam velit in. Elementum turpis magna vitae fermentum cursus maecenas integer dignissim tortor. Ut diam interdum vel sagittis risus lacus tincidunt suspendisse. At facilisi sed amet ut faucibus. Leo tortor odio velit tristique morbi purus. Et odio odio amet at ut. Tellus aenean turpis tempus porttitor pharetra tincidunt habitant tempus bibendum.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="qa-card dark-text">
+                            <div class="qa-card__show">
+                                <div class="qa-card__title text20 bold-text">
+                                    Вопрос номер три, который часто задают
+                                </div>
+                                <div class="qa-card__btn">
+                                    <span>+</span>
+                                </div>
+                            </div>
+                            <div class="qa-card__hidden">
+                                <div class="text16">
+                                    Lorem ipsum dolor sit amet consectetur. Dis aliquet consequat felis quis diam consectetur. Quisque velit ut nulla id enim iaculis curabitur netus odio. Quam sed et enim vulputate. Mi elementum orci ut nunc id ultrices erat scelerisque. Convallis massa urna gravida dignissim neque at nisl faucibus accumsan. Pellentesque pellentesque odio ullamcorper nam pharetra fames enim posuere. Purus at nullam mi aliquam velit in. Elementum turpis magna vitae fermentum cursus maecenas integer dignissim tortor. Ut diam interdum vel sagittis risus lacus tincidunt suspendisse. At facilisi sed amet ut faucibus. Leo tortor odio velit tristique morbi purus. Et odio odio amet at ut. Tellus aenean turpis tempus porttitor pharetra tincidunt habitant tempus bibendum.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="qa-card dark-text">
+                            <div class="qa-card__show">
+                                <div class="qa-card__title text20 bold-text">
+                                    Вопрос номер четыре, который часто задают
+                                </div>
+                                <div class="qa-card__btn">
+                                    <span>+</span>
+                                </div>
+                            </div>
+                            <div class="qa-card__hidden">
+                                <div class="text16">
+                                    Lorem ipsum dolor sit amet consectetur. Dis aliquet consequat felis quis diam consectetur. Quisque velit ut nulla id enim iaculis curabitur netus odio. Quam sed et enim vulputate. Mi elementum orci ut nunc id ultrices erat scelerisque. Convallis massa urna gravida dignissim neque at nisl faucibus accumsan. Pellentesque pellentesque odio ullamcorper nam pharetra fames enim posuere. Purus at nullam mi aliquam velit in. Elementum turpis magna vitae fermentum cursus maecenas integer dignissim tortor. Ut diam interdum vel sagittis risus lacus tincidunt suspendisse. At facilisi sed amet ut faucibus. Leo tortor odio velit tristique morbi purus. Et odio odio amet at ut. Tellus aenean turpis tempus porttitor pharetra tincidunt habitant tempus bibendum.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="qa-card dark-text">
+                            <div class="qa-card__show">
+                                <div class="qa-card__title text20 bold-text">
+                                    Вопрос номер пять, который часто задают
+                                </div>
+                                <div class="qa-card__btn">
+                                    <span>+</span>
+                                </div>
+                            </div>
+                            <div class="qa-card__hidden">
+                                <div class="text16">
+                                    Lorem ipsum dolor sit amet consectetur. Dis aliquet consequat felis quis diam consectetur. Quisque velit ut nulla id enim iaculis curabitur netus odio. Quam sed et enim vulputate. Mi elementum orci ut nunc id ultrices erat scelerisque. Convallis massa urna gravida dignissim neque at nisl faucibus accumsan. Pellentesque pellentesque odio ullamcorper nam pharetra fames enim posuere. Purus at nullam mi aliquam velit in. Elementum turpis magna vitae fermentum cursus maecenas integer dignissim tortor. Ut diam interdum vel sagittis risus lacus tincidunt suspendisse. At facilisi sed amet ut faucibus. Leo tortor odio velit tristique morbi purus. Et odio odio amet at ut. Tellus aenean turpis tempus porttitor pharetra tincidunt habitant tempus bibendum.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="new-question _card">
+                        <div class="new-question__icon">
+                            <img src="img/question.svg" alt="">
+                        </div>
+                        <div class="new-question__title text20 bold-text dark-text">
+                            Не нашли ответа на свой вопрос? Задайте его нам
+                        </div>
+                        <button class="new-question__btn m-btn m-btn-primary">
+                            <span>Задать свой вопрос</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="blog">
+                <div class="container">
+                    <div class="blog__top">
+                        <div class="text45 bold-text">
+                            Блог Steam Team
+                        </div>
+                        <div class="blog__nav">
+                            <div class="swiper-button swiper-button-prev">
+                                <svg width="30" height="13" viewBox="0 0 30 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M-1.90735e-06 6.31689L10 12.0904V0.543392L-1.90735e-06 6.31689ZM30 5.31689L9 5.31689V7.31689L30 7.31689V5.31689Z" fill="#454545" />
+                                </svg>
+                            </div>
+                            <div class="swiper-button swiper-button-next">
+                                <svg width="30" height="13" viewBox="0 0 30 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M30 6.31689L20 12.0904V0.543392L30 6.31689ZM0 5.31689L21 5.31689V7.31689L0 7.31689L0 5.31689Z" fill="#454545" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="blog__slider">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="blog-card">
+                                        <a href="" class="blog-card__img">
+                                            <img src="img/blog.webp" alt="">
+                                        </a>
+                                        <div class="blog-card__content _card">
+                                            <div class="blog-card__info">
+                                                <a href="" class="blog-card__title text20 bold-text">
+                                                    Заголовок статьи
+                                                </a>
+                                                <div class="blog-card__desc text15">
+                                                    Описание статьи в 2-3 строки, дающее примерное понимание, о чем будет в ней идти речь и побуждающее прочитать
+                                                </div>
+                                            </div>
+                                            <div class="blog-card__nav">
+                                                <a href="" class="blog-card__btn m-btn m-btn-primary">
+                                                    <span>Читать далее</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="blog-card">
+                                        <a href="" class="blog-card__img">
+                                            <img src="img/blog.webp" alt="">
+                                        </a>
+                                        <div class="blog-card__content _card">
+                                            <div class="blog-card__info">
+                                                <a href="" class="blog-card__title text20 bold-text">
+                                                    Заголовок статьи
+                                                </a>
+                                                <div class="blog-card__desc text15">
+                                                    Описание статьи в 2-3 строки, дающее примерное понимание, о чем будет в ней идти речь и побуждающее прочитать
+                                                </div>
+                                            </div>
+                                            <div class="blog-card__nav">
+                                                <a href="" class="blog-card__btn m-btn m-btn-primary">
+                                                    <span>Читать далее</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="blog-card">
+                                        <a href="" class="blog-card__img">
+                                            <img src="img/blog.webp" alt="">
+                                        </a>
+                                        <div class="blog-card__content _card">
+                                            <div class="blog-card__info">
+                                                <a href="" class="blog-card__title text20 bold-text">
+                                                    Заголовок статьи
+                                                </a>
+                                                <div class="blog-card__desc text15">
+                                                    Описание статьи в 2-3 строки, дающее примерное понимание, о чем будет в ней идти речь и побуждающее прочитать
+                                                </div>
+                                            </div>
+                                            <div class="blog-card__nav">
+                                                <a href="" class="blog-card__btn m-btn m-btn-primary">
+                                                    <span>Читать далее</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="blog-card">
+                                        <a href="" class="blog-card__img">
+                                            <img src="img/blog.webp" alt="">
+                                        </a>
+                                        <div class="blog-card__content _card">
+                                            <div class="blog-card__info">
+                                                <a href="" class="blog-card__title text20 bold-text">
+                                                    Заголовок статьи
+                                                </a>
+                                                <div class="blog-card__desc text15">
+                                                    Описание статьи в 2-3 строки, дающее примерное понимание, о чем будет в ней идти речь и побуждающее прочитать
+                                                </div>
+                                            </div>
+                                            <div class="blog-card__nav">
+                                                <a href="" class="blog-card__btn m-btn m-btn-primary">
+                                                    <span>Читать далее</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="blog__bottom">
+                        <a href="" class="blog__btn m-btn m-btn-primary">
+                            <span>Смотреть все статьи</span>
+                        </a>
+                    </div>
+                </div>
+
+            </section>
+
+
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__col">
+                        <div class="footer__title">
+                            Steam Team
+                        </div>
+                        <div class="footer__requisite">
+                            <div class="text14 white50-text">
+                                Реквизиты юр.лица
+                            </div>
+                            <div class="footer__requisite-desc text14 bold-text">
+                                ООО “ААА” <br>
+                    ИНН/КПП: 4543535353/555000555 <br>
+                    Р/с: 40404040404040404040 <br>
+                    БИК: 005555999 <br>
+                    К/с: 30000000000000000000
+                            </div>
+                        </div>
+                        <div class="footer__links2">
+                            <a href="" class="footer__link2 white50-text">
+                                <span>Договор оферты</span>
+                            </a>
+                            <a href="" class="footer__link2 white50-text">
+                                <span>Политика конфиденциальности</span>
+                            </a>
+                        </div>
+                        <div class="socials">
+                            <a href="" class="socials__item">
+                                <img src="img/youtube.svg" alt="">
+                            </a>
+                            <a href="" class="socials__item">
+                                <img src="img/tg2.svg" alt="">
+                            </a>
+                            <a href="" class="socials__item">
+                                <img src="img/dzen.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer__col">
+                        <div class="footer__subtitle">
+                            <span class="text20 bold-text">
+                    Ссылки
+                </span>
+                        </div>
+                        <div class="footer__links">
+                            <a href="" class="footer__link white50-text">
+                                <span>Главная</span>
+                            </a>
+                            <a href="" class="footer__link white50-text">
+                                <span>О компании</span>
+                            </a>
+                            <a href="" class="footer__link white50-text">
+                                <span>Пополнить баланс</span>
+                            </a>
+                            <a href="" class="footer__link white50-text">
+                                <span>Отзывы</span>
+                            </a>
+                            <a href="" class="footer__link white50-text">
+                                <span>FAQ</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer__col">
+                        <div class="footer__subtitle">
+                            <span class="text20 bold-text">
+                    Контактная информация
+                </span>
+                        </div>
+                        <div class="footer-contacts">
+                            <div class="footer-contacts__item">
+                                <div class="footer-contacts__icon">
+                                    <img src="img/phone.svg" alt="">
+                                </div>
+                                <div class="footer-contacts__content">
+                                    <div class="footer-contacts__title white50-text">
+                                        Телефон службы поддержки
+                                    </div>
+                                    <div class="footer-contacts__desc">
+                                        <a href="tel:88005553535">
+                                            8 800 555 35 35
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer-contacts__item">
+                                <div class="footer-contacts__icon">
+                                    <img src="img/tg.svg" alt="">
+                                </div>
+                                <div class="footer-contacts__content">
+                                    <div class="footer-contacts__title white50-text">
+                                        Telegram-бот
+                                    </div>
+                                    <div class="footer-contacts__desc">
+                                        <a href="">@steamteam_support</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer-contacts__item">
+                                <div class="footer-contacts__icon">
+                                    <img src="img/mail.svg" alt="">
+                                </div>
+                                <div class="footer-contacts__content">
+                                    <div class="footer-contacts__title white50-text">
+                                        e-mail
+                                    </div>
+                                    <div class="footer-contacts__desc">
+                                        <a class="text-underline" href="mailto:inbox@steamteam.ru">
+                                            inbox@steamteam.ru
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer-contacts__item">
+                                <div class="footer-contacts__icon">
+                                    <img src="img/tg2.svg" alt="">
+                                </div>
+                                <div class="footer-contacts__content">
+                                    <div class="footer-contacts__title white50-text">
+                                        Адрес
+                                    </div>
+                                    <div class="footer-contacts__desc">
+                                        Москва, Россия
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__col">
+                        <div class="footer-info">
+                            <div class="footer-info__item">
+                                <div class="footer-info__title text14 white50-text">
+                                    Проведение платежей:
+                                </div>
+                                <div class="footer-info__desc text15">
+                                    Пн-Вс: 09:00 - 21:00
+                                </div>
+                            </div>
+                            <div class="footer-info__item">
+                                <div class="footer-info__title text14 white50-text">
+                                    Консультации и поддержка:
+                                </div>
+                                <div class="footer-info__desc text15">
+                                    Пн-Вс: 09:00 - 21:00
+                                </div>
+                            </div>
+                            <div class="footer-info__item">
+                                <div class="footer-info__title text14 white50-text">
+                                    Способы оплаты:
+                                </div>
+                                <div class="footer-pay">
+                                    <div class="footer-pay__item">
+                                        <img src="img/pay-way.svg" alt="">
+                                    </div>
+                                    <div class="footer-pay__item">
+                                        <img src="img/pay-way2.svg" alt="">
+                                    </div>
+                                    <div class="footer-pay__item">
+                                        <img src="img/pay-way3.svg" alt="">
+                                    </div>
+                                    <div class="footer-pay__item">
+                                        <img src="img/pay-way4.svg" alt="">
+                                    </div>
+                                    <div class="footer-pay__item">
+                                        <img src="img/pay-way5.svg" alt="">
+                                    </div>
+                                    <div class="footer-pay__item">
+                                        <img src="img/pay-way6.svg" alt="">
+                                    </div>
+                                    <div class="footer-pay__item">
+                                        <img src="img/pay-way7.svg" alt="">
+                                    </div>
+                                    <div class="footer-pay__item">
+                                        <img src="img/pay-way8.svg" alt="">
+                                    </div>
+                                    <div class="footer-pay__item">
+                                        <img src="img/pay-way9.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.min.js"></script>
+
+</body>
+
+</html>
