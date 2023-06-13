@@ -46,12 +46,27 @@
         <a href="error.html" style="display: block; margin-bottom: 20px;">
             Ошибка оплаты
         </a>
+        <a href="conf.html" style="display: block; margin-bottom: 20px;">
+            Политика конфиденциальности
+        </a>
+        <a href="login.html" style="display: block; margin-bottom: 20px;">
+            Как узнать логин:
+        </a>
+        <a href="rules.html" style="display: block; margin-bottom: 20px;">
+            Правила возврата
+        </a>
 
 
 
 
         <button style="border: 2px solid #000;margin-bottom: 20px;" data-modal="successModal">
             Форма успешно отправлена
+        </button>
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-modal="loginModal">
+            Как узнать логин:
+        </button>
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-modal="payModal">
+            Инструкция по оплате YooMoney
         </button>
 
     </div>
@@ -71,6 +86,54 @@
                 </div>
                 <div class="text20 dark-text">
                     Сейчас вы будете переотправлены на страницу оплаты
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal login-modal modal2" id="loginModal">
+        <div class="modal__bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="modal__close _close-modal">
+                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.07422 2.36792L14.4253 14.719M14.4253 2.36792L2.07422 14.719" stroke="#A58FFF" stroke-width="3" stroke-linecap="round" />
+                </svg>
+            </button>
+            <div class="modal__scroll">
+                <div class="text45 mob-text25 bold-text">
+                    Как узнать логин:
+                </div>
+                <img class="login-modal__img" src="img/login.webp" alt="">
+                <div class="text">
+                    <p>Чтобы узнать логин, страну и валюту аккаунта Steam, нажмите на имя профиля Steam в правом верхнем углу и выберите «Об аккаунте».</p>
+                    <p>Проверить с помощью браузера (необходимо авторизоваться).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal pay-modal modal2" id="payModal">
+        <div class="modal__bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="modal__close _close-modal">
+                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.07422 2.36792L14.4253 14.719M14.4253 2.36792L2.07422 14.719" stroke="#A58FFF" stroke-width="3" stroke-linecap="round" />
+                </svg>
+            </button>
+            <div class="modal__scroll">
+                <div class="text45 mob-text25 bold-text">
+                    Инструкция по оплате YooMoney
+                </div>
+                <div class="text">
+                    <p>
+                        Для того, чтобы произвести оплату через YooMoney, вам необходимо сделать перевод на указанную сумму на логин
+                        <a href="">steamteamservice</a>
+                    </p>
+                </div>
+                <img class="login-modal__img" src="img/pay.webp" alt="">
+                <div class="text">
+                    <p>Чтобы узнать логин, страну и валюту аккаунта Steam, нажмите на имя профиля Steam в правом верхнем углу и выберите «Об аккаунте».</p>
+                    <p>Проверить с помощью браузера (необходимо авторизоваться).</p>
                 </div>
             </div>
         </div>
